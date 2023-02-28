@@ -6,7 +6,7 @@ import (
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h1>Hello World...</h1>")
+	fmt.Fprintf(w, "<h1>Hello World... very simple httpServer</h1>")
 }
 
 func check(w http.ResponseWriter, r *http.Request) {
@@ -17,5 +17,5 @@ func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/health_check", check)
 	fmt.Println("Server starting...")
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3001", nil)
 }
